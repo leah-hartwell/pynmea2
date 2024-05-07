@@ -32,3 +32,20 @@ class SSNHRP(SSN, nmea_utils.DatetimeFix):
         ("Magnetic Variation", "magnetic_variation", float),
         ("Magnetic Variation Dir", "magnetic_variation_dir")
     )
+    
+class SSNRBP(SSN, nmea_utils.DatetimeFix):
+    
+    fields = (
+        ("Timestamp", "timestamp", nmea_utils.timestamp),
+        ("Datestamp", "datestamp", nmea_utils.datestamp),
+        ("North South from Base", "ns_base", float),
+        ("East West from Base", "ew_base", float),
+        ("High Low from Base", "hl_base", float),
+        ("Number of Satellites", "num_sats", int),
+        ("Quality Indicator", "qual_ind", int),
+        ("Base Motion Indicator", "moving_base", int),
+        ("Number of Satellites", "num_sats", int),
+        ("Correction Age", "corr_age", float),
+        ("Rover Serial Number", "rover_serial"),
+        ("Base ID", "base_id")
+    )
